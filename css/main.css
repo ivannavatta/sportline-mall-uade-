@@ -1,0 +1,235 @@
+.servicios-mall {
+    padding: 40px 20px;
+}
+
+.servicios-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.servicio-item {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgb(2 95 157 / 28%)
+}
+
+.servicio-item:hover {
+    transform: translateY(-5px);
+}
+
+.servicio-item i {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.servicio-item h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.servicio-item p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.locales-mall{
+    background-color: #4a83f51f;
+}
+
+.locales{
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.locales-mall-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.locales-mall-container img{
+    display: block;
+    width: 100%;
+    height: 200px;
+    border-radius: 0;
+    object-fit: cover;    
+    transition: transform 0.4s ease;
+    transform-origin: center center;
+}
+
+.locales-mall-container img:hover{
+    transform: scale(1.05);
+}
+
+.locales-mall h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+.locales-mall h3::after{
+  content: '';
+  display: block;
+  text-align: center;
+  width: 60px;
+  height: 3px;
+  background: #025f9d;
+  margin: 10px auto 0;
+
+}
+
+.estadisticas-mall h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+.estadisticas-mall h3::after{
+  content: '';
+  display: block;
+  text-align: center;
+  width: 60px;
+  height: 3px;
+  background: #025f9d;
+  margin: 10px auto 0;
+
+}
+.estadisticas-mall {
+    padding: 50px 20px;
+    background: #fff;
+}
+
+.stats-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+    text-align: left;
+}
+
+.stat-card{
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-hero{
+    padding: 28px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.stat-value{
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat-sub{
+    font-size: 13px;
+    opacity: 0.95;
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.stat-body{
+    padding: 18px 20px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.stat-desc{
+    color: #555;
+    font-size: 14px;
+    margin: 0;
+    flex: 1;
+}
+
+.stat-btn{
+    background: transparent;
+    color: #025f9d;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    align-self: flex-start;
+    transition: all 0.2s ease;
+    border: 2px solid #014b78;
+}
+
+.stat-btn:hover{
+    background: #014b78;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Gradientes para cada card */
+.gradient-blue{ background: linear-gradient(90deg,#6fb1ff 0%, #2a7bd7 100%); }
+.gradient-teal{ background: linear-gradient(90deg,#f44f4f 0%, #a01a1a 100%); }
+.gradient-pink{ background: linear-gradient(90deg,#8e99ff 0%, #564dd2 100%); }
+
+
+
+@media (max-width: 992px) {
+    .servicios-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .locales-mall-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .servicios-container {
+        grid-template-columns: 1fr;
+    }
+    .locales-mall-container {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    .locales {
+        height: 150px;
+    }
+    .locales-mall-container img {
+        height: 150px;
+    }
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    .stat-hero{
+        padding: 20px;
+    }
+    .stat-value{
+        font-size: 28px;
+    }
+}
