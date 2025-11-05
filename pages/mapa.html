@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/mapa.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Document</title>
 </head>
@@ -11,16 +12,150 @@
     <header>
         <nav class="navbar">
             <div class="logo"><b>Sport</b>Line Mall</div>
+            <img src="../img/icon_formula1.svg" class="f1-car" srcset="">
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars" id="menu-icon"></i>
+            </div>
             <div class="nav-links" id="nav-links">
-                <a href="../index.html" class="active">Inicio</a>
-                <a href="./locales.html">Locales</a>
+                <a href="../index.html">Inicio</a>
+                <div class="dropdown">
+                    <a href="./locales.html">Locales</a>
+                    <div class="dropdown-content">
+                        <a href="./submenu/comida.html"><i class="fas fa-dumbbell"></i> Comida</a>
+                        <a href="./submenu/moda.html"><i class="fas fa-dumbbell"></i> Moda</a>
+                        <a href="./submenu/gaming.html"><i class="fas fa-dumbbell"></i> Gaming</a>
+                        <a href="./submenu/deportes.html"><i class="fas fa-dumbbell"></i> Deportes</a>
+                    </div>
+                </div>
                 <a href="./contacto.html">Contacto</a>
                 <a href="./mapa.html" class="active">Mapa</a>
             </div>
             </nav>
     </header>
-
     <main>
+        <div class="map-container">
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" style="background:#e6e6e6; border-radius:10px;">
+  <style>
+    .local {
+      fill: #ffffff;
+      stroke: #d0d0d0;
+      stroke-width: 1.2;
+      rx: 10;
+      ry: 10;
+      transition: fill 0.18s ease, transform 0.18s ease;
+    }
+    .local:hover {
+      fill: #fbfbfb;
+      transform: translateY(-3px);
+    }
+    .pin image {
+      transition: transform 0.18s ease;
+      cursor: pointer;
+    }
+    .pin image:hover {
+      transform: translateY(-6px) scale(1.06);
+    }
+    .label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      fill: #333;
+      text-anchor: middle;
+      pointer-events: none;
+    }
+  </style>
+
+  <!-- Plano: locales variados (rx/ry curvos y tamaños diferentes) -->
+  <!-- fila superior -->
+  <rect id="L1"  class="local" x="60"  y="40"  width="140" height="90"  rx="12" ry="12"/>
+  <rect id="L2"  class="local" x="220" y="40"  width="100" height="60"  rx="12" ry="12"/>
+  <rect id="L3"  class="local" x="340" y="40"  width="220" height="90"  rx="14" ry="14"/>
+  <rect id="L4"  class="local" x="580" y="40"  width="200" height="120" rx="14" ry="14"/>
+
+  <!-- segunda fila con alturas distintas -->
+  <rect id="L5"  class="local" x="60"  y="150" width="120" height="120" rx="12" ry="12"/>
+  <rect id="L6"  class="local" x="200" y="150" width="160" height="80"  rx="10" ry="10"/>
+  <rect id="L7"  class="local" x="380" y="150" width="100" height="140" rx="12" ry="12"/>
+  <rect id="L8"  class="local" x="500" y="150" width="180" height="80"  rx="10" ry="10"/>
+
+  <!-- tercera fila, más irregulares -->
+  <rect id="L9"  class="local" x="60"  y="290" width="260" height="110" rx="14" ry="14"/>
+  <rect id="L10" class="local" x="340" y="290" width="140" height="110" rx="12" ry="12"/>
+  <rect id="L11" class="local" x="500" y="290" width="220" height="110" rx="12" ry="12"/>
+
+  <!-- fila inferior -->
+  <rect id="L12" class="local" x="60"  y="420" width="160" height="90" rx="10" ry="10"/>
+  <rect id="L13" class="local" x="240" y="420" width="200" height="90" rx="12" ry="12"/>
+  <rect id="L14" class="local" x="460" y="420" width="260" height="90" rx="12" ry="12"/>
+
+  <!-- Pasillos finos (decorativos) -->
+  <rect x="40" y="135" width="820" height="12" rx="6" fill="#efe9e9" />
+  <rect x="40" y="270" width="820" height="12" rx="6" fill="#efe9e9" />
+  <rect x="40" y="410" width="820" height="12" rx="6" fill="#efe9e9" />
+
+  <!-- TITULO (opcional, borrable) -->
+  <text x="60" y="28" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#4a4a4a">Mapa - Sport Line Mall</text>
+
+  <!-- ----- PINS centrados sobre locales ----- -->
+  <!-- Para centrar: usamos el centro de cada rect (x + width/2, y) y posicionamos la imagen encima -->
+  <!-- Pin Fórmula 1 sobre L3 -->
+  <g class="pin" transform="translate(450,120)">
+    <title>Fórmula 1 store</title>
+    <!-- la imagen está 30px arriba de la parte superior del local -->
+    <image href="../img/icon-formula1-mapa.png" width="46" height="46" x="-23" y="-56" />
+    <text class="label" x="0" y="-62">Fórmula 1 store</text>
+  </g>
+
+  <!-- Pin Gaming sobre L6 -->
+  <g class="pin" transform="translate(270,100)">
+    <title>Zona Gamer</title>
+    <image href="../img/icon-gaming-mapa.png" width="46" height="46" x="-23" y="-56" />
+    <text class="label" x="0" y="-62">Zona Gamer</text>
+  </g>
+
+  <!-- Pin Gym sobre L8 -->
+  <g class="pin" transform="translate(680,120)">
+    <title>Fit Hub</title>
+    <image href="../img/icon-gym-mapa.png" width="46" height="46" x="-23" y="-56" />
+    <text class="label" x="0" y="-62">Fit Hub</text>
+  </g>
+
+  <!-- Pin Zapatillas sobre L9 (centrado en rect grande) -->
+  <g class="pin" transform="translate(190,380)">
+    <title>Low Key</title>
+    <image href="../img/icon_zapatilla_mapa.png" width="46" height="46" x="-23" y="-56" />
+    <text class="label" x="0" y="-62">Low Key</text>
+  </g>
+
+  <!-- Pin Fútbol sobre L11 -->
+  <g class="pin" transform="translate(600,380)">
+    <title>Camisetas dor</title>
+    <image href="../img/icon-futbol-mapa.png" width="46" height="46" x="-23" y="-56" />
+    <text class="label" x="0" y="-62">Camisetas dor</text>
+  </g>
+
+  <!-- Pin Comida sobre L14 (fila inferior, centrado) -->
+  <g class="pin" transform="translate(590,500)">
+    <title>Patio de comidas</title>
+    <image href="../img/icon-comida-mapa.png" width="46" height="46" x="-23" y="-56" />
+    <text class="label" x="0" y="-62">Patio de comidas</text>
+  </g>
+
+  <!-- Opcional: pequeñas sombras para dar profundidad -->
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <!-- aplicamos sombra solo a los pins -->
+  <g filter="url(#softShadow)">
+    <!-- reusar las mismas imágenes en el grupo sombra no es necesario; en cambio el filter envuelve group de pins -->
+  </g>
+</svg>
+
+
+
+        </div>
+<!-- SVG: mapa del shopping con pines -->
 
     </main>
 
@@ -51,8 +186,10 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2023 Sport Line Mall. Todos los derechos reservados.</p>
+            <img src="../img/icon_formula1.png" alt="" srcset="">
+
         </div>
     </footer>
-    
+    <script src="../js/menu.js"></script>
 </body>
 </html>

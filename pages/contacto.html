@@ -11,9 +11,21 @@
     <header>
         <nav class="navbar">
             <div class="logo"><b>Sport</b>Line Mall</div>
+            <img src="../img/icon_formula1.svg" class="f1-car" srcset="">
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars" id="menu-icon"></i>
+            </div>
             <div class="nav-links" id="nav-links">
                 <a href="../index.html">Inicio</a>
-                <a href="./locales.html">Locales</a>
+                <div class="dropdown">
+                    <a href="./locales.html">Locales</a>
+                    <div class="dropdown-content">
+                        <a href="./submenu/comida.html"><i class="fas fa-dumbbell"></i> Comida</a>
+                        <a href="./submenu/moda.html"><i class="fas fa-dumbbell"></i> Moda</a>
+                        <a href="./submenu/gaming.html"><i class="fas fa-dumbbell"></i> Gaming</a>
+                        <a href="./submenu/deportes.html"><i class="fas fa-dumbbell"></i> Deportes</a>
+                    </div>
+                </div>
                 <a href="./contacto.html" class="active">Contacto</a>
                 <a href="./mapa.html">Mapa</a>
             </div>
@@ -50,7 +62,9 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2023 Sport Line Mall. Todos los derechos reservados.</p>
+            <img src="../img/icon_formula1.png" alt="" srcset="">
         </div>
     </footer>
+    <script src="../js/menu.js"></script>
 </body>
 </html>
