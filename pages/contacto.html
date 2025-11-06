@@ -1,38 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/contacto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Document</title>
+    <title>Contacto - SportLine Mall</title>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo"><b>Sport</b>Line Mall</div>
-            <img src="../img/icon_formula1.svg" class="f1-car" srcset="">
+            <div class="logo">
+                <img src="../img/icon_formula1.svg" class="f1-car" alt="">
+                <b>Sport</b>Line Mall
+            </div>
+
             <div class="menu-toggle" id="mobile-menu">
                 <i class="fas fa-bars" id="menu-icon"></i>
             </div>
+
             <div class="nav-links" id="nav-links">
                 <a href="../index.html">Inicio</a>
                 <div class="dropdown">
                     <a href="./locales.html">Locales</a>
                     <div class="dropdown-content">
-                        <a href="./submenu/comida.html"><i class="fas fa-dumbbell"></i> Comida</a>
-                        <a href="./submenu/moda.html"><i class="fas fa-dumbbell"></i> Moda</a>
-                        <a href="./submenu/gaming.html"><i class="fas fa-dumbbell"></i> Gaming</a>
+                        <a href="./submenu/comida.html"><i class="fas fa-utensils"></i> Comida</a>
+                        <a href="./submenu/moda.html"><i class="fas fa-tshirt"></i> Moda</a>
+                        <a href="./submenu/gaming.html"><i class="fas fa-gamepad"></i> Gaming</a>
                         <a href="./submenu/deportes.html"><i class="fas fa-dumbbell"></i> Deportes</a>
                     </div>
                 </div>
                 <a href="./contacto.html" class="active">Contacto</a>
                 <a href="./mapa.html">Mapa</a>
             </div>
-            </nav>
+        </nav>
     </header>
-    <main>
 
+    <main class="page-contact">
+        <section class="contact-hero">
+            <h1>Contacto</h1>
+            <p>Escribinos, llama o buscá cómo llegar. Estamos para ayudarte.</p>
+        </section>
+
+        <section class="contact-info">
+            <div class="info-col">
+                <h3>Dirección</h3>
+                <p>Av. Principal 1234, Buenos Aires</p>
+                <button class="btn-outline"><i class="fas fa-map-marker-alt"></i> Cómo llegar</button>
+            </div>
+
+            <div class="info-col">
+                <h3>Teléfonos</h3>
+                <p>Central: <strong>+54 11 4567-8900</strong></p>
+                <p>Recepción: <strong>+54 11 4567-8901</strong></p>
+            </div>
+
+            <div class="info-col">
+                <h3>Horarios</h3>
+                <p>Lun - Sáb: 10:00 — 22:00</p>
+                <p>Domingos: 12:00 — 21:00</p>
+            </div>
+        </section>
+
+        <section class="contact-split">
+            <form class="contact-form" action="#" method="post" autocomplete="off">
+                <h2>Envíanos un mensaje</h2>
+
+                <div class="form-row">
+                    <label for="name">Nombre</label>
+                    <input id="name" name="name" type="text" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="phone">Teléfono (opcional)</label>
+                    <input id="phone" name="phone" type="tel">
+                </div>
+
+                <div class="form-row">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-outline">Enviar</button>
+                </div>
+            </form>
+
+            <div class="split-divider" aria-hidden="true"></div>
+
+            <div class="contact-map">
+                <h2>Localizanos</h2>
+                <div class="map-frame">
+                    <iframe
+                        src="https://www.google.com/maps?q=Buenos%20Aires&output=embed"
+                        frameborder="0"
+                        style="border:0;"
+                        allowfullscreen=""
+                        aria-hidden="false"
+                        tabindex="0"></iframe>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -43,14 +117,11 @@
                 <p><i class="fas fa-phone"></i> +54 11 4567-8900</p>
                 <p><i class="fas fa-envelope"></i> info@sportlinemall.com</p>
             </div>
-            
             <div class="footer-section">
                 <h4>Horarios</h4>
-                <p>Lunes a Sábados: 10:00 - 22:00</p>
+                <p>Lun-Sáb: 10:00 - 22:00</p>
                 <p>Domingos: 12:00 - 21:00</p>
-                <p>Feriados: 12:00 - 21:00</p>
             </div>
-            
             <div class="footer-section">
                 <h4>Síguenos</h4>
                 <div class="social-links">
@@ -62,9 +133,10 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2023 Sport Line Mall. Todos los derechos reservados.</p>
-            <img src="../img/icon_formula1.png" alt="" srcset="">
+            <img src="../img/icon_formula1.png" alt="logo">
         </div>
     </footer>
+
     <script src="../js/menu.js"></script>
 </body>
 </html>
