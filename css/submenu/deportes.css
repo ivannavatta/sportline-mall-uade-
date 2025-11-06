@@ -10,10 +10,9 @@
     margin-bottom: 20px;
 }
 
-.locales-mall-container .patio-comidas-mall, .tiendas-mall{
+.locales-mall-container .tiendas-mall{
     max-width: 1200px;
     margin: 0 auto;
-
     text-align: center;
 } 
 
@@ -63,4 +62,24 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+}
+
+@media (max-width: 992px) {
+    .tiendas-mall {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .locales-mall-container .tiendas-mall {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    .locales {
+        height: 150px;
+    }
+    .locales-mall-container img {
+        height: 150px;
+    }
 }

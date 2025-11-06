@@ -245,6 +245,9 @@ main{
 
 
 @media (max-width: 768px) {
+    .navbar .logo{
+        padding-left: 0px;
+    }
     .nav-links {
         display: flex;
         flex-direction: column;
